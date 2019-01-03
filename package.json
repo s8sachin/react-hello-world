@@ -2,6 +2,7 @@
   "name": "hello-world",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://s8sachin.github.io/react-hello-world",
   "dependencies": {
     "@babel/core": "7.1.0",
     "@svgr/webpack": "2.4.1",
@@ -26,6 +27,7 @@
     "file-loader": "2.0.0",
     "fork-ts-checker-webpack-plugin-alt": "0.4.14",
     "fs-extra": "7.0.0",
+    "gh-pages": "^2.0.1",
     "html-webpack-plugin": "4.0.0-alpha.2",
     "identity-obj-proxy": "3.0.0",
     "jest": "23.6.0",
@@ -64,7 +66,9 @@
     "test": "node scripts/test.js",
     "test-coverage": "npm test -- --coverage --no-cache --u",
     "eslint": "./node_modules/.bin/eslint .",
-    "eslint-fix": "./node_modules/.bin/eslint . --fix"
+    "eslint-fix": "./node_modules/.bin/eslint . --fix",
+    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
